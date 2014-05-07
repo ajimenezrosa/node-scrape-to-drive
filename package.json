@@ -1,0 +1,16 @@
+{
+  "name": "bitquick-scrape",
+  "version": "0.0.9",
+  "description": "Scrape bitquick.co for aleeex",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "~0.15.0",
+    "request": "~2.34.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tapmodo",
+  "license": "ISC"
+}
