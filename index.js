@@ -48,11 +48,11 @@ Spreadsheet.load({
         // Next, scrape the data from the URL (see scrapeData() below)
         // I wrote this function to use a callback, so the function
         // shown here is called after the data is scraped
-        scrapeData(function(err, scrapeData) {
+        scrapeData(function(err, scrape_data) {
 
             // Do a "filter()" of the scraped data, to filter out
             // all rows which have an existing ID in the spreadsheet
-            scrapeData = scrapeData.filter(function(i) {
+            scrape_data = scrape_data.filter(function(i) {
               if (seen.indexOf(parseInt(i[0])) == -1) return true;
             });
 
@@ -67,10 +67,10 @@ Spreadsheet.load({
             //   ... weird because it's an object with a numeric key
             //   ... the numeric key is the row to start on (info.nextRow)
             var data = {};
-            data[info.nextRow] = scrapeData;
+            data[info.nextRow] = scrape_data;
 
             // Only update the spreadsheet if there are new rows
-            if (scrapeData.length) {
+            if (scrape_data.length) {
                 sheet.add(data);
 
                 // Send the added data to Google Docs
