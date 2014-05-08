@@ -5,12 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "cheerio": "~0.15.0",
-    "request": "~2.34.0"
+    "request": "~2.34.0",
+    "edit-google-spreadsheet": "^0.2.6"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tapmodo",
-  "license": "ISC"
+  "license": "MIT"
 }
