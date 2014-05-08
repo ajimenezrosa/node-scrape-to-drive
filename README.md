@@ -2,7 +2,8 @@ Web Scrape to Google Drive
 ======================================
 
 This script will scrape a web table and update a Google Spreadsheet with
-the scraped rows. It can be easily modified for your purpose.
+the scraped rows.  
+It can be easily modified for your purpose.
 
 ### Requisites
 
