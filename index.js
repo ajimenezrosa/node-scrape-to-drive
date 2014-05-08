@@ -39,16 +39,16 @@ Spreadsheet.load({
 
     // We can now call methods on the worksheet,
     // first, "receive" will give us the current worksheet/data
-    sheet.receive(function(err,rows,info) {
+    sheet.receive(function(err, rows, info) {
 
         // I'm going to keep track of the row IDs that are in the sheet
         // See below for the idMap() function
-        var seen = idMap(rows,info);
+        var seen = idMap(rows, info);
 
         // Next, scrape the data from the URL (see scrapeData() below)
         // I wrote this function to use a callback, so the function
         // shown here is called after the data is scraped
-        scrapeData(function(err,scrapeData) {
+        scrapeData(function(err, scrapeData) {
 
             // Do a "filter()" of the scraped data, to filter out
             // all rows which have an existing ID in the spreadsheet
@@ -104,11 +104,11 @@ function scrapeData(callback) {
         var table = [];
 
         // Loop over each table row
-        $tab.find('tr').each(function(i,html) {
+        $tab.find('tr').each(function(i, html) {
             var cols = [];
 
             // Push each table data cell value onto cols array
-            $(html).find('td').each(function(i,html) {
+            $(html).find('td').each(function(i, html) {
                 cols.push($(html).text());
             });
 
@@ -120,14 +120,14 @@ function scrapeData(callback) {
         table.shift();
 
         // When done, call the callback with the table data
-        callback(null,table);
+        callback(null, table);
     });
 
 };
 
 // Builds an array of IDs we've seen. This is also funky,
 // because of the data structure the library returns for the Google Doc.
-function idMap(rows,info) {
+function idMap(rows, info) {
   var count_to = info.lastRow;
   var out = [];
   for(var i=2; i <= count_to; i++) {
