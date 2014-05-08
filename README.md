@@ -27,11 +27,11 @@ This was (and is) the hardest part of the whole operation. See
 [this article](http://goo.gl/eePiB6) for information about setting up
 a service account and giving it access to your spreadsheet.
 
-  * Replace the OAuth email
-  * Create the PEM file and place it in this directory
-  * Use spreadsheetName and worksheetName for your spreadsheet
-  * When running the script with node, it will output worksheetId and spreadsheetId values
-  * For better performance, replace the worksheetName and spreadsheetName with the IDs
+  * Replace the OAuth email (in config file)
+  * Create the PEM file and place it in this directory (verify path/name in config)
+  * Update `spreadsheetName` and `worksheetName` to match your spreadsheet
+  * When the script runs, it will output `worksheetId` and `spreadsheetId` values
+  * For better performance, replace the sheet names with the given IDs
 
 ### Running the script
 
