@@ -1,4 +1,4 @@
-Web Table Scrape to Google Spreadsheet
+Web Scrape to Google Drive
 ======================================
 
 This script will scrape a web table and update a Google Spreadsheet with
